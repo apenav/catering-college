@@ -3,4 +3,4 @@ sudo useradd -m ${NEWUSER} -s /bin/bash
 cat /etc/group | sed "s/^\(admin:.*\)/\1,${NEWUSER}/" > /tmp/group && sudo mv /tmp/group /etc/
 sudo apt-get update
 sudo apt-get install -y git-core
-sudo su - ${NEWUSER} -c "git clone https://github.com/pikesley/catering-college ; cd catering-college ; ./install-chef-server"
+sudo su - ${NEWUSER} -c "git clone https://github.com/apenav/catering-college ; cd catering-college ; ./install-chef-server"
